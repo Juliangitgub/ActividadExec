@@ -29,7 +29,6 @@ int main(int argc, char *argv[]) {
       exit(1);
     } else if (pid == 0) {
     
-
       execvp(comando[0],comando);
       perror("Return from execlp() not expected");
       exit(EXIT_FAILURE);
