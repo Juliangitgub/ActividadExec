@@ -19,7 +19,6 @@ int main(int argc, char *argv[]) {
   comando[i-1]=argv[i];
   }
    pid_t pid;
-    //leer_de_teclado(BUFSIZ,comando);
 
     if (strcmp("exit",comando[0]) == 0) {
      exit(1);
@@ -30,7 +29,6 @@ int main(int argc, char *argv[]) {
       exit(1);
     } else if (pid == 0) {
     
-      //vector = de_cadena_a_vector(comando);
 
       execvp(comando[0],comando);
       perror("Return from execlp() not expected");
